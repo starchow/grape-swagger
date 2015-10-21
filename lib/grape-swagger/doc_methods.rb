@@ -238,7 +238,7 @@ module GrapeSwagger
       scope = options[:scope]
       result = {}
       models.each do |model|
-        name       = (model.instance_variable_get(:@root) || parse_entity_name(model))
+        name       = parse_entity_name(model)
         properties = {}
         required   = []
 
